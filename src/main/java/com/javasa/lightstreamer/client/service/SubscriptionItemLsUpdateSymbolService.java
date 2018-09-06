@@ -30,7 +30,7 @@ public class SubscriptionItemLsUpdateSymbolService {
                                                                  DataAdapterLs dataAdapter) throws SubscrException, PushUserException, PushServerException, PushConnException {
 
         String groupName = null;
-        groupName = String.format("%s %s" + group, groupName, listBrokCode);
+        groupName = String.format("%s " + group, listBrokCode);
 
         groupName = groupName.replaceFirst(" ", "");
         SubscribedTableKey subscribedKey = lsClient.subscribeTable(
