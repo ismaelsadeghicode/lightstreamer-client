@@ -41,14 +41,14 @@ public class SubscriptionItemLsUpdateSymbolService {
                 },
                 new HandyTableListener() {
                     public void onUpdate(int itemPos, String itemName, UpdateInfo update) {
-                        for (int i = 1; i <= update.getNumFields(); i++) {
-                            if (update.isValueChanged(i)) {
+//                        for (int i = 1; i <= update.getNumFields(); i++) {
+//                            if (update.isValueChanged(i)) {
 //                                log.info(" cache : " + update.getNewValue(i)); // show all log
-                                if (update.getNewValue(i).contains("Symbol")) {
-                                    log.info("message = {}", update.getItemPos());
-                                }
-                            }
-                        }
+//                                if (update.getNewValue(i).contains("Symbol")) {
+                                    log.info("message = {}", update);
+//                                }
+//                            }
+//                        }
                     }
 
                     public void onSnapshotEnd(int itemPos, String itemName) {
